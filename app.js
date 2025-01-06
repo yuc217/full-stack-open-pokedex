@@ -1,6 +1,5 @@
 import express from 'express'
 
-express = require('express')
 const app = express()
 
 // get the port from env variable
