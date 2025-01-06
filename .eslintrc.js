@@ -5,13 +5,6 @@ module.exports = {
     "jest/globals": true,
     'node': true
   },
-  'overrides': [
-		{
-			'env': {
-				'node': true
-			}
-    }
-  ],
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended"
