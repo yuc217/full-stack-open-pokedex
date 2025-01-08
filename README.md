@@ -17,3 +17,6 @@ Start by running `npm install` inside the project folder
 # exercise 11.1-11.9
 
 GitHub Action pipeline script - end2end test using playwright 
+
+deployment pipeline: deploy to fly.io https://full-stack-open-pokedex-snowy-star-2580.fly.dev/
+automated deployment when changes happen
