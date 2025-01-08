@@ -51,16 +51,22 @@ jobs:
 
       - name: Notify Discord on Success
         if: success()       
-        uses: rjstone/discord-webhook-notify@v1.0.4
+        uses: Ilshidur/action-discord@master
         with:
-          severity: info
-          details: 'new version gets deployed'
-          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+          args: |
+            The health check failed. The application might be down.
+            Link: ${{ secrets.APP_URL }}
+            Author: ${{ github.actor }}
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
 
       - name: Notify Discord on Failure
         if: failure() 
-        uses: rjstone/discord-webhook-notify@v1.0.4
+        uses: Ilshidur/action-discord@master
         with:
-          severity: error
-          details: 'a build fails'
-          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+          args: |
+            The health check failed. 
+            Link: ${{ secrets.APP_URL }}
+            Author: ${{ github.actor }}
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
