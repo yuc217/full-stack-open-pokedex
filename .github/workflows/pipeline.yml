@@ -48,4 +48,20 @@ jobs:
             env:
               GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               DEFAULT_BUMP: patch
-   
+              
+          - name: Notify Discord on Success
+            if: success()
+            uses: Ilshidur/action-discord@master
+            with:
+              args: 'A new version has been deployed successfully!'
+            env:
+              DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+  
+          - name: Notify Discord on Failure
+            if: failure()
+            uses: Ilshidur/action-discord@master
+            with:
+              args: 'The build has failed.'
+            env:
+              DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+    
