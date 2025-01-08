@@ -21,6 +21,12 @@ GitHub Action pipeline script - end2end test using playwright
 deployment pipeline: deploy to fly.io https://full-stack-open-pokedex-snowy-star-2580.fly.dev/
 automated deployment when changes happen
 
+add version release
+skip condition
+branch protection
+
+
+
 # See https://fly.io/docs/app-guides/continuous-deployment-with-github-actions/
 
 name: Fly Deploy
