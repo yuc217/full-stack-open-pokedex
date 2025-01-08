@@ -36,3 +36,4 @@ primary_region = 'arn'
   method = "GET"
   timeout = "5s"
   path = "/health"
+  protocol = "http"
