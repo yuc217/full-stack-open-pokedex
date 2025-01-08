@@ -14,7 +14,7 @@ Start by running `npm install` inside the project folder
 `npm run build` to make a production build
 `npm run start-prod` to run your production build
 
-# exercise 11.1-11.9
+# exercise
 
 GitHub Action pipeline script - end2end test using playwright 
 
